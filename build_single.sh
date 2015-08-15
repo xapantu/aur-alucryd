@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 ARCH="extra-x86_64"
 CHROOT_PATH="/var/lib/archbuild/$ARCH"
 

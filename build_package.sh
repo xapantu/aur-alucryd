@@ -2,6 +2,7 @@ ARCH="extra-x86_64"
 CHROOT_PATH="/var/lib/archbuild/$ARCH"
 
 ORDER="granite-bzr
+contractor-bzr
 gtk-theme-elementary-bzr
 gala-bzr
 wingpanel-rewrite-x11-bzr
@@ -16,8 +17,10 @@ pantheon-terminal-bzr
 pantheon-files-bzr
 switchboard-bzr
 switchboard-plug-network-bzr
-switchboard-plug-power-network-bzr
-switchboard-plug-keyboard-network-bzr
+switchboard-plug-power-bzr
+switchboard-plug-keyboard-bzr
+lightdm-pantheon-greeter
+noise-bzr
 audience-bzr"
 
 PWD_START=$(pwd)
