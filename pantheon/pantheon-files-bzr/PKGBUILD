@@ -40,7 +40,8 @@ build() {
     -DCMAKE_INSTALL_PREFIX='/usr' \
     -DCMAKE_INSTALL_LIBDIR='/usr/lib' \
     -DCMAKE_SKIP_RPATH='TRUE' \
-    -DGSETTINGS_COMPILE='FALSE'
+    -DGSETTINGS_COMPILE='FALSE' \
+    -DCMAKE_INSTALL_LIBDIR='/usr/lib'
   make
 }
 
