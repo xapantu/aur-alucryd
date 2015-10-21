@@ -23,6 +23,7 @@ pkgver() {
 
 build() {
   cd switchboard-plug-keyboard
+bzr merge lp:~julien-spautz/switchboard-plug-keyboard/forbidden-keybindings
 
   if [[ -d build ]]; then
     rm -rf build

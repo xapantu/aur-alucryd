@@ -25,6 +25,7 @@ pkgver() {
 
 build() {
   cd pantheon-terminal
+  bzr merge lp:~shokry/pantheon-terminal/fix-1426470
 
   if [[ -d build ]]; then
     rm -rf build

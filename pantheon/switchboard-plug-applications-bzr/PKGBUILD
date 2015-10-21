@@ -25,6 +25,7 @@ pkgver() {
 
 build() {
   cd switchboard-plug-applications
+  bzr merge lp:~andrewmaccuaig/switchboard-plug-applications/edit-startup-entry
 
   if [[ -d build ]]; then
     rm -rf build
