@@ -1,7 +1,7 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=wingpanel-indicator-sound-bzr
-pkgver=r8
+pkgver=r36
 pkgrel=1
 pkgdesc='Sound indicator for Wingpanel'
 arch=('i686' 'x86_64')
@@ -12,6 +12,7 @@ depends=('wingpanel-rewrite-x11-bzr' 'libcanberra' 'gtk2')
 makedepends=('bzr' 'cmake' 'vala')
 provides=('wingpanel-indicator-sound')
 conflicts=('wingpanel-indicator-sound')
+install='wingpanel-indicator-sound.install'
 source=('bzr+lp:wingpanel-indicator-sound')
 sha256sums=('SKIP')
 
@@ -21,17 +22,23 @@ pkgver() {
   echo "r$(bzr revno)"
 }
 
-build() {
+prepare() {
   cd wingpanel-indicator-sound
 
   if [[ -d build ]]; then
     rm -rf build
   fi
-  mkdir build && cd build
+  mkdir build
+}
+
+build() {
+  cd wingpanel-indicator-sound/build
 
   cmake .. \
+    -DCMAKE_BUILD_TYPE='Release' \
     -DCMAKE_INSTALL_PREFIX='/usr' \
-    -DCMAKE_INSTALL_LIBDIR='/usr/lib'
+    -DCMAKE_INSTALL_LIBDIR='/usr/lib' \
+    -DGSETTINGS_COMPILE='FALSE'
   make
 }
 
