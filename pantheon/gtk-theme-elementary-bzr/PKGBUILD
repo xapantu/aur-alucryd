@@ -22,7 +22,6 @@ pkgver() {
 
 package_gtk-theme-elementary-bzr() {
   pkgdesc='elementary GTK theme'
-  depends=('gtk-engine-murrine' 'gtk-engine-unico')
   optdepends=('elementary-icon-theme')
   provides=('gtk-theme-elementary')
   conflicts=('gtk-theme-elementary')

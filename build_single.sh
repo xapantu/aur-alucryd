@@ -20,11 +20,11 @@ if [ $? -ne 0 ]; then
 	cd $PWD_START;
 else
 	cd $PWD_START;
-	repo-add ~/Dev/pkg/repo/elementary.db.tar.gz pantheon/$p/*.tar.xz &> $PWD_START/logs/${p}_pkg.log;
+	repo-add /home/builder/Dev/pkg/repo/elementary.db.tar.gz pantheon/$p/*.tar.xz &> $PWD_START/logs/${p}_pkg.log;
 	if [ $? -ne 0 ]; then
 		echo "Couldn't add the package to the repository"
 	else
-		cp pantheon/$p/*.tar.xz ~/Dev/pkg/repo/
+		cp pantheon/$p/*.tar.xz /home/builder/Dev/pkg/repo/
 	fi;
 fi;
 

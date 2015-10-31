@@ -9,12 +9,12 @@ arch=('i686' 'x86_64')
 url='https://launchpad.net/pantheon-greeter'
 license=('GPL')
 groups=('pantheon-unstable')
-depends=('clutter-gtk' 'granite-bzr' 'lightdm')
+depends=('clutter-gtk' 'granite-bzr' 'lightdm' 'wingpanel-bzr')
 makedepends=('bzr' 'cmake' 'libxfixes' 'vala')
 provides=('lightdm-pantheon-greeter')
 conflicts=('lightdm-pantheon-greeter')
 install='lightdm-pantheon-greeter.install'
-source=('lightdm-pantheon-greeter::bzr+lp:~l-admin-3/pantheon-greeter/indicator-api-integration'
+source=('lightdm-pantheon-greeter::bzr+lp:pantheon-greeter'
         'lightdm-pantheon-greeter-paths.patch')
 sha256sums=('SKIP'
             '164d93b3dd75a5dfa2ecb4095bbf0f366e778544b4769b4a5c47be1cef952d1b')
@@ -27,6 +27,7 @@ pkgver() {
 
 prepare() {
   cd lightdm-pantheon-greeter
+  bzr merge lp:~l-admin-3/pantheon-greeter/indicator-api-integration
 
   patch -Np1 -i ../lightdm-pantheon-greeter-paths.patch
 }

@@ -11,7 +11,7 @@ contractor-bzr
 gtk-theme-elementary-bzr
 elementary-icon-theme-bzr
 gala-bzr
-wingpanel-rewrite-x11-bzr
+wingpanel-bzr
 wingpanel-indicator-session-bzr
 wingpanel-indicator-sound-bzr
 wingpanel-indicator-power-bzr
@@ -26,11 +26,25 @@ switchboard-plug-network-bzr
 switchboard-plug-power-bzr
 switchboard-plug-keyboard-bzr
 switchboard-plug-online-accounts-bzr
+switchboard-plug-locale-bzr
+switchboard-plug-about-bzr
+switchboard-plug-mouse-touchpad-bzr
+switchboard-plug-applications-bzr
+switchboard-plug-notifications-bzr
+switchboard-plug-datetime-bzr
+switchboard-plug-desktop-bzr
+switchboard-plug-display-bzr
+pantheon-backgrounds-bzr
+pantheon-default-settings-bzr
+switchboard-plug-security-privacy-bzr
 gsignond-plugin-lastfm-bzr
-lightdm-pantheon-greeter
+lightdm-pantheon-greeter-bzr
 scratch-text-editor-bzr
-noise-bzr
-audience-bzr"
+noise-player-bzr
+audience-bzr
+cerbere-bzr
+pantheon-session-bzr
+ttf-opensans"
 
 PWD_START=$(pwd)
 
