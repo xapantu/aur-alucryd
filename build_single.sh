@@ -13,8 +13,8 @@ mkdir -p logs
 
 echo "Building ${p}…";
 i=pantheon/$p;
-cd $i && makechrootpkg -r $CHROOT_PATH -- -i &> $PWD_START/logs/${p}.log;
-#cd $i && makechrootpkg -r $CHROOT_PATH -- -i
+#cd $i && makechrootpkg -r $CHROOT_PATH -- -i &> $PWD_START/logs/${p}.log;
+cd $i && makechrootpkg -r $CHROOT_PATH -- -i
 if [ $? -ne 0 ]; then
 	echo "Couldn't build package $p";
 	cd $PWD_START;

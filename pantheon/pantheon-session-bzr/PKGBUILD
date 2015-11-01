@@ -27,18 +27,19 @@ pkgver() {
 prepare() {
   cd pantheon-session
 
-  sed 's/policykit-1/polkit/' -i autostart/polkit-gnome-authentication-agent-1-pantheon.desktop
-  sed 's|gnome-session --session=pantheon|/usr/bin/pantheon-session|' -i debian/pantheon.desktop
+#  sed 's/policykit-1/polkit/' -i autostart/polkit-gnome-authentication-agent-1-pantheon.desktop
+#  sed 's|gnome-session --session=pantheon|/usr/bin/pantheon-session|' -i debian/pantheon.desktop
 }
 
 package() {
   cd pantheon-session
 
-  mkdir -p "${pkgdir}"/{etc/xdg,usr/{bin,share/{gnome-session/sessions,pantheon,xsessions}}}
+  mkdir -p "${pkgdir}"/{etc/xdg,usr/{bin,share/{gnome-session/sessions,pantheon,xsessions,wayland-sessions}}}
   cp -dr --no-preserve='ownership' autostart "${pkgdir}/etc/xdg/"
-  cp -dr --no-preserve='ownership' debian/pantheon.desktop "${pkgdir}/usr/share/xsessions/"
-  cp -dr --no-preserve='ownership' debian/pantheon.session "${pkgdir}/usr/share/gnome-session/sessions/"
-  cp -dr --no-preserve='ownership' gconf "${pkgdir}/usr/share/GConf"
+  cp -dr --no-preserve='ownership' xsessions/pantheon.desktop "${pkgdir}/usr/share/xsessions/"
+  cp -dr --no-preserve='ownership' gnome-session/pantheon.session "${pkgdir}/usr/share/gnome-session/sessions/"
+  cp -dr --no-preserve='ownership' gnome-session/pantheon-wayland.session "${pkgdir}/usr/share/gnome-session/sessions/"
+  cp -dr --no-preserve='ownership' wayland-sessions/pantheon-wayland.desktop "${pkgdir}/usr/share/wayland-sessions/"
   cp -dr --no-preserve='ownership' unity-greeter "${pkgdir}/usr/share/"
   cp -dr --no-preserve='ownership' applications "${pkgdir}/usr/share/pantheon/"
 
@@ -46,7 +47,7 @@ package() {
   find "${pkgdir}" -type f -exec chmod 644 {} +
 
 # gnome-session workaround
-  install -m 755 ../pantheon-session.sh "${pkgdir}"/usr/bin/pantheon-session
+#  install -m 755 ../pantheon-session.sh "${pkgdir}"/usr/bin/pantheon-session
 }
 
 # vim: ts=2 sw=2 et:

@@ -9,7 +9,7 @@ arch=('i686' 'x86_64')
 url='https://launchpad.net/noise'
 license=('GPL3')
 depends=('desktop-file-utils' 'granite-bzr' 'gst-plugins-base-libs' 'libgpod'
-         'libnotify' 'libpeas' 'sqlheavy' 'taglib')
+         'libnotify' 'libpeas' 'libgda' 'taglib')
 makedepends=('bzr' 'cmake' 'gobject-introspection' 'vala')
 optdepends=('gst-plugins-base: "Base" plugin libraries'
             'gst-plugins-good: "Good" plugin libraries'

@@ -35,6 +35,7 @@ switchboard-plug-datetime-bzr
 switchboard-plug-desktop-bzr
 switchboard-plug-display-bzr
 pantheon-backgrounds-bzr
+ttf-opensans
 pantheon-default-settings-bzr
 switchboard-plug-security-privacy-bzr
 gsignond-plugin-lastfm-bzr
@@ -43,8 +44,7 @@ scratch-text-editor-bzr
 noise-player-bzr
 audience-bzr
 cerbere-bzr
-pantheon-session-bzr
-ttf-opensans"
+pantheon-session-bzr"
 
 PWD_START=$(pwd)
 
