@@ -9,7 +9,7 @@ arch=('i686' 'x86_64')
 url='https://launchpad.net/gala'
 license=('GPL3')
 groups=('pantheon-unstable')
-depends=('clutter-gtk' 'mutter' 'plank'
+depends=('clutter-gtk' 'mutter' 'pantheon-dock'
          'libgranite.so')
 makedepends=('bzr' 'gnome-common' 'granite-bzr' 'intltool' 'vala')
 provides=('gala' 'libgala.so')
