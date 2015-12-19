@@ -8,6 +8,7 @@ gsignond-plugin-oauth-git
 gsignond-plugin-sasl-git
 granite-bzr
 contractor-bzr
+pantheon-dock-bzr
 gtk-theme-elementary-bzr
 elementary-icon-theme-bzr
 gala-bzr
@@ -18,7 +19,6 @@ wingpanel-indicator-power-bzr
 wingpanel-indicator-datetime-bzr
 wingpanel-indicator-network-bzr
 wingpanel-indicator-notifications-bzr
-pantheon-dock-bzr
 pantheon-terminal-bzr
 pantheon-files-bzr
 switchboard-bzr

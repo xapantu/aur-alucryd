@@ -12,7 +12,7 @@ url='https://launchpad.net/wingpanel'
 license=('GPL3')
 groups=('pantheon-unstable')
 depends=('clutter' 'cogl' 'glib2' 'glibc' 'gtk3' 'libgee' 'mutter'
-         'libgala.so' 'libgranite.so')
+         'gala' 'granite-bzr')
 makedepends=('bzr' 'cmake' 'vala')
 provides=('wingpanel' 'libwingpanel-2.0.so')
 conflicts=('wingpanel')

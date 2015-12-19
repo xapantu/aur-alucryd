@@ -38,7 +38,7 @@ package_gtk-theme-elementary-bzr() {
 
 package_plank-theme-pantheon-bzr() {
   pkgdesc='Pantheon Plank theme'
-  depends=('plank')
+  depends=('pantheon-dock')
   provides=('plank-theme-pantheon')
   conflicts=('plank-theme-pantheon')
 

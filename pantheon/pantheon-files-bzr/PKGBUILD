@@ -9,7 +9,7 @@ arch=('i686' 'x86_64')
 url='https://launchpad.net/pantheon-files'
 license=('GPL3')
 groups=('pantheon-unstable')
-depends=('desktop-file-utils' 'gconf' 'libnotify' 'plank' 'zeitgeist'
+depends=('desktop-file-utils' 'gconf' 'libnotify' 'pantheon-dock' 'zeitgeist'
          'libgranite.so')
 makedepends=('bzr' 'cmake' 'gnome-common' 'granite-bzr' 'sqlite3' 'vala')
 optdepends=('contractor-bzr: Various context menu entries'

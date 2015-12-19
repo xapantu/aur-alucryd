@@ -16,7 +16,7 @@ conflicts=('switchboard-plug-about')
 source=('bzr+lp:switchboard-plug-about'
         'about-archlinux.patch')
 sha256sums=('SKIP'
-            '792efaed1c32a03f058581887fe8fb48e53a9edadc66a0addd5ffbc7c288ad65')
+            'f077cc3e752887f982862f848f442baf5cc2ad33cba71831f59b30a4b1946362')
 
 pkgver() {
   cd switchboard-plug-about
