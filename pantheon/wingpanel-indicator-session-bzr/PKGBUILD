@@ -1,7 +1,7 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=wingpanel-indicator-session-bzr
-pkgver=r31
+pkgver=r99
 pkgrel=1
 pkgdesc='Session indicator for Wingpanel'
 arch=('i686' 'x86_64')

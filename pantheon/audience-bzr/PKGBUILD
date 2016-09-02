@@ -2,7 +2,7 @@
 # Contributor: Ner0 <darkelfdarkelf666@yahoo.co.uk>
 
 pkgname=audience-bzr
-pkgver=r529
+pkgver=r644
 pkgrel=1
 pkgdesc='The Pantheon Video Player'
 arch=('i686' 'x86_64')

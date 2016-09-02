@@ -2,7 +2,7 @@
 # Contributor: Ner0 <darkelfdarkelf666@yahoo.co.uk>
 
 pkgname=pantheon-files-bzr
-pkgver=r2107
+pkgver=r2305
 pkgrel=1
 pkgdesc='The Pantheon File Manager'
 arch=('i686' 'x86_64')

@@ -3,7 +3,7 @@
 # Contributor: flamelab <panosfilip@gmail.com>
 
 pkgname=wingpanel-bzr
-pkgver=r126
+pkgver=r151
 pkgrel=1
 epoch=1
 pkgdesc='The Pantheon Panel'

@@ -1,7 +1,7 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=switchboard-plug-display-bzr
-pkgver=r107
+pkgver=r167
 pkgrel=1
 pkgdesc='Display plug for Switchboard'
 arch=('i686' 'x86_64')

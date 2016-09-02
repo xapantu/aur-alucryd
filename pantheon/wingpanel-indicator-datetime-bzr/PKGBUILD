@@ -1,7 +1,7 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=wingpanel-indicator-datetime-bzr
-pkgver=r104
+pkgver=r156
 pkgrel=1
 pkgdesc='Date & Time indicator for Wingpanel'
 arch=('i686' 'x86_64')

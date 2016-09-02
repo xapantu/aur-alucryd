@@ -1,7 +1,7 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=switchboard-plug-desktop-bzr
-pkgver=r425
+pkgver=r480
 pkgrel=1
 pkgdesc='Desktop plug for Switchboard'
 arch=('i686' 'x86_64')

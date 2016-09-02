@@ -1,7 +1,7 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=wingpanel-indicator-power-bzr
-pkgver=r74
+pkgver=r179
 pkgrel=1
 pkgdesc='Power indicator for Wingpanel'
 arch=('i686' 'x86_64')

@@ -1,7 +1,7 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 
 pkgname=pantheon-backgrounds-bzr
-pkgver=r43
+pkgver=r53
 pkgrel=1
 pkgdesc='Backgrounds for Pantheon'
 arch=('any')

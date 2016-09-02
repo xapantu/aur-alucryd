@@ -3,7 +3,7 @@ diff -rupN pantheon-default-settings.orig/debian/elementary-default-settings.gse
 +++ pantheon-default-settings/debian/elementary-default-settings.gsettings-override	2016-05-06 10:35:39.111720681 +0200
 @@ -1,14 +1,13 @@
  [net.launchpad.plank.dock.settings]
--dock-items=['gala-multitaskingview.dockitem','midori.dockitem','pantheon-mail.dockitem','maya-calendar.dockitem','noise.dockitem','audience.dockitem','pantheon-photos.dockitem','switchboard.dockitem','appcenter.dockitem']
+-dock-items=['gala-multitaskingview.dockitem','epiphany.dockitem','org.pantheon.mail.dockitem','maya-calendar.dockitem','org.pantheon.noise.dockitem','org.pantheon.audience.dockitem','pantheon-photos.dockitem','switchboard.dockitem','org.pantheon.appcenter.dockitem']
 +dock-items=['gala-multitaskingview.dockitem','midori.dockitem','pantheon-mail.dockitem','maya-calendar.dockitem','noise.dockitem','audience.dockitem','pantheon-photos.dockitem','switchboard.dockitem']
  hide-delay=250
  hide-mode='window-dodge'
@@ -34,14 +34,6 @@ diff -rupN pantheon-default-settings.orig/debian/elementary-default-settings.gse
  
  [org.gnome.settings-daemon.plugins.power]
  ambient-enabled=false
-diff -rupN pantheon-default-settings.orig/plank/dock1/launchers/appcenter.dockitem pantheon-default-settings/plank/dock1/launchers/appcenter.dockitem
---- pantheon-default-settings.orig/plank/dock1/launchers/appcenter.dockitem	2016-05-06 10:35:59.277076000 +0200
-+++ pantheon-default-settings/plank/dock1/launchers/appcenter.dockitem	1970-01-01 01:00:00.000000000 +0100
-@@ -1,4 +0,0 @@
--[PlankDockItemPreferences]
--Launcher=file:///usr/share/applications/appcenter.desktop
--
--
 diff -rupN pantheon-default-settings.orig/policykit.desktop pantheon-default-settings/policykit.desktop
 --- pantheon-default-settings.orig/policykit.desktop	2016-05-06 10:35:59.277076000 +0200
 +++ pantheon-default-settings/policykit.desktop	2016-05-06 10:35:39.108387445 +0200

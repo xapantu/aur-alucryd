@@ -2,7 +2,7 @@
 # Contributor: Ner0 <darkelfdarkelf666@yahoo.co.uk>
 
 pkgname=pantheon-terminal-bzr
-pkgver=r803
+pkgver=r892
 pkgrel=1
 pkgdesc='The Pantheon Terminal Emulator'
 arch=('i686' 'x86_64')
