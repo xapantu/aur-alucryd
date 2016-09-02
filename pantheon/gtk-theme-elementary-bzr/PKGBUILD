@@ -4,7 +4,7 @@
 
 pkgbase=gtk-theme-elementary-bzr
 pkgname=('gtk-theme-elementary-bzr' 'plank-theme-pantheon-bzr')
-pkgver=r550
+pkgver=r614
 pkgrel=1
 arch=('any')
 url='https://launchpad.net/egtk'

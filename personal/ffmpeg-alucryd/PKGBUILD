@@ -1,38 +1,38 @@
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
-# Contributor: Ionut Biru <ibiru@archlinux.org>
 # Contributor: Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
 # Contributor: Tom Newsom <Jeepster@gmx.co.uk>
 # Contributor: Paul Mattal <paul@archlinux.org>
 
 pkgname=ffmpeg-alucryd
-pkgver=2.8
+pkgver=3.0
 pkgrel=1
 epoch=1
-pkgdesc='complete, cross-platform solution to record, convert and stream audio and video'
+pkgdesc='Complete solution to record, convert and stream audio and video'
 arch=('i686' 'x86_64')
 url='http://ffmpeg.org/'
-license=('GPL' 'custom')
-depends=('alsa-lib' 'bzip2' 'dcadec' 'fontconfig' 'freetype2' 'fribidi' 'glibc'
-         'gmp' 'gnutls' 'gsm' 'jack' 'lame' 'libass' 'ladspa' 'libbluray'
-         'libmodplug' 'libpulse' 'libsoxr' 'libssh' 'libtheora' 'libva'
-         'libvdpau' 'libwebp' 'libx11' 'libxcb' 'libxext' 'libxv'
+license=('GPL3')
+depends=('alsa-lib' 'bzip2' 'fontconfig' 'fribidi' 'gnutls' 'gsm'
+         'intel-media-sdk' 'lame' 'libass' 'libbluray' 'libmodplug' 'libpulse'
+         'libsoxr' 'libssh' 'libtheora' 'libva' 'libvdpau' 'libwebp'
          'opencore-amr' 'openjpeg' 'opus' 'schroedinger' 'sdl' 'speex'
-         'v4l-utils' 'xz' 'zlib'
-         'libavcodec.so' 'libavdevice.so' 'libavfilter.so' 'libavformat.so'
-         'libavresample.so' 'libavutil.so' 'libfdk-aac.so' 'libpostproc.so'
-         'libswresample.so' 'libswscale.so' 'libvorbisenc.so' 'libvorbis.so'
-         'libvpx.so' 'libx264.so' 'libx265.so' 'libxvidcore.so')
-makedepends=('hardening-wrapper' 'libvdpau' 'yasm')
+         'v4l-utils' 'xvidcore' 'zlib'
+         'libdcadec.so' 'libfdk-aac.so' 'libvidstab.so' 'libvorbis.so'
+         'libvorbisenc.so' 'libvpx.so' 'libx264.so' 'libx265.so')
+makedepends=('hardening-wrapper' 'ladspa' 'libvdpau' 'yasm')
+optdepends=('ladspa: LADSPA filters')
 provides=('ffmpeg'
           'libavcodec.so' 'libavdevice.so' 'libavfilter.so' 'libavformat.so'
           'libavresample.so' 'libavutil.so' 'libpostproc.so' 'libswresample.so'
           'libswscale.so')
 conflicts=('ffmpeg')
 source=("http://ffmpeg.org/releases/ffmpeg-${pkgver}.tar.bz2")
-sha256sums=('9565236404d3515aab754283c687c0a001019003148bf7f708e643608c0690b8')
+sha256sums=('f19ff77a2f7f736a41dd1499eef4784bf3cb7461f07c13a268164823590113c0')
 
 build() {
   cd ffmpeg-${pkgver}
+
+  export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/intel/mediasdk/lib/pkgconfig"
 
   ./configure \
     --prefix='/usr' \
@@ -52,6 +52,7 @@ build() {
     --enable-libfreetype \
     --enable-libfribidi \
     --enable-libgsm \
+    --enable-libmfx \
     --enable-libmodplug \
     --enable-libmp3lame \
     --enable-libopencore_amrnb \
@@ -65,6 +66,7 @@ build() {
     --enable-libssh \
     --enable-libtheora \
     --enable-libv4l2 \
+    --enable-libvidstab \
     --enable-libvorbis \
     --enable-libvpx \
     --enable-libwebp \
@@ -74,7 +76,7 @@ build() {
     --enable-nonfree \
     --enable-shared \
     --enable-version3 \
-    --enable-x11grab \
+    --enable-x11grab
 
   make
   make tools/qt-faststart
